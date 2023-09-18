@@ -28,105 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 34);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 47);
-            this.textBox1.TabIndex = 0;
+            textBox1.Location = new Point(47, 45);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(402, 61);
+            textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(41, 223);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 66);
-            this.textBox2.TabIndex = 1;
+            textBox2.Location = new Point(47, 297);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(402, 93);
+            textBox2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(41, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Encrypt";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.DodgerBlue;
+            button1.ForeColor = Color.Transparent;
+            button1.Location = new Point(87, 204);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(116, 42);
+            button1.TabIndex = 2;
+            button1.Text = "Encrypt";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(166, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Decrypt";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackColor = Color.DodgerBlue;
+            button2.ForeColor = Color.Transparent;
+            button2.Location = new Point(299, 204);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(116, 42);
+            button2.TabIndex = 3;
+            button2.Text = "Decrypt";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Input Text";
+            label1.AutoSize = true;
+            label1.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(47, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 23);
+            label1.TabIndex = 4;
+            label1.Text = "Input Text";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(119, 196);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Result";
+            label2.AutoSize = true;
+            label2.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(47, 263);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 23);
+            label2.TabIndex = 5;
+            label2.Text = "Result";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(41, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 23);
-            this.textBox3.TabIndex = 6;
+            textBox3.Location = new Point(47, 153);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(402, 27);
+            textBox3.TabIndex = 6;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Password";
+            label3.AutoSize = true;
+            label3.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(47, 118);
+            label3.Name = "label3";
+            label3.Size = new Size(212, 23);
+            label3.TabIndex = 7;
+            label3.Text = "Enter Encryption Password";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 317);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(489, 423);
+            Controls.Add(label3);
+            Controls.Add(textBox3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "Text Encrypter & Decrypter";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

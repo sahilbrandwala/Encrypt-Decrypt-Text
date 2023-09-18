@@ -12,26 +12,26 @@ namespace Encrypt_Decrypt_Text
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-           
-                byte[] data = Encoding.UTF8.GetBytes(this.textBox1.Text);
-                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+
+
+            byte[] data = Encoding.UTF8.GetBytes(this.textBox1.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(Encoding.UTF8.GetBytes(this.textBox3.Text));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider
                 {
-                    byte[] keys = md5.ComputeHash(Encoding.UTF8.GetBytes(this.textBox3.Text));
-                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider
-                    {
-                        Key = keys,
-                        Mode = CipherMode.ECB,
-                        Padding = PaddingMode.PKCS7
-                    })
-                    {
-                        ICryptoTransform transform = tripDes.CreateEncryptor();
-                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                        this.textBox2.Text = Convert.ToBase64String(results, 0, results.Length).ToString();
-                    }
+                    Key = keys,
+                    Mode = CipherMode.ECB,
+                    Padding = PaddingMode.PKCS7
+                })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    this.textBox2.Text = Convert.ToBase64String(results, 0, results.Length).ToString();
                 }
-               
             }
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -69,4 +69,4 @@ namespace Encrypt_Decrypt_Text
             }
         }
     }
-    }
+}
